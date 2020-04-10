@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>Sardar Patel Institute of technology</h1>
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+				<a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Academics</a>
+				<a href="{{ url_for('finyear') }}"><i class="fas fa-user-circle"></i>FinalYear</a>
+				<a href="{{ url_for('mini') }}"><i class="fas fa-user-circle"></i>Mini</a>
+				<a href="{{ url_for('rpaper') }}"><i class="fas fa-user-circle"></i>Research</a>
+				<a href="{{ url_for('patent') }}"><i class="fas fa-user-circle"></i>patent</a>
+				<a href="{{ url_for('co') }}"><i class="fas fa-home"></i>Co-curricular</a>
+				<a href="{{ url_for('extra') }}"><i class="fas fa-home"></i>Extra</a>
+				<a href="{{ url_for('social') }}"><i class="fas fa-home"></i>Social</a>
+				
+			</div>
+		</nav>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>
